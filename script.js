@@ -118,7 +118,7 @@ function toggleDirections() {
       about.style.display = 'block'
       where.style.display = 'block'
       social.style.display = 'block'
-      document.getElementById("directionsNav").href = "/index.html?";
+      //document.getElementById("directionsNav").href = "/index.html?";
   } else {
       slides.style.display = 'none'; // Hide About page
       controlls.style.display = 'none'; // Show About page
@@ -127,6 +127,6 @@ function toggleDirections() {
       about.style.display = 'none'
       where.style.display = 'none'
       social.style.display = 'none'
-      document.getElementById("directionsNav").href = "/index.html?dir";
+      //document.getElementById("directionsNav").href = "/index.html?dir";
     }
 }
