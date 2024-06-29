@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Welcome to Centaurus Spot. Discover amazing places, learn about us, find directions, and connect on social media.">
+<meta name="keywords" content="Centaurus Spot, amazing place, Makrinitsa, directions, social media, contact, hotel, motel, graphic vibes, mountain views">
+<title>Centaurus Spot - </title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav>
+    <a href="#about" id="aboutNav">About Us</a>
+    <a href="index.html?dir" onclick="toggleDirections()" id="directionsNav">Directions</a>
+    <a href="#social">Social Media</a>
+    <a href="#contact" id="contactNav">Contact</a>
+    <select id="language-select" onchange="switchLanguage()">
+      <option value="en">🇬🇧</option>
+      <option value="el">🇬🇷</option>
+    </select>
+    <button class="dark" id="DarkModeBtn" onclick="toggleDarkMode()">🌙☀️</button>
+  </nav>
+  <div id="Title" class="centered">
+    <h1>Centaurus Spot</h1>
+  </div>
+  <div class="centerInside">
+    <div class="centered container" id="aboutDiv">
+      <h2 id="aboutTitle">About Us</h2>
+      <h3>Centaurus Spot</h3>
+      <h4 id="about">A traditional guest house in Makrinitsa, just next to the famous main square of the village. You get to walk a traditional "kalderimi" - which is a path made of stone - to reach the astonishing view that the house offers. In the interior a series of windows give you a perfect view of the city of Volos and the sea laying in front. There will be no wasted day during your stay. Even bad weather like a storm is a special experience.
+        I really love the house i am offering becouse it is my favorite part of my childhood. As a child i loved running on the traditional village paths. They may seem difficult but it's amazing how familiar you get and then love it!! I am up to help and answer any questions you might have during your stay. We can be in touch through telephone.
+        its actually the place and the view - but also the main feeling you have when you are at mountain Pelion and its gem - Makrinitsa! its not easy to describe this feeling..!! It,s like living in heaven among clouds and birds.
+      </h4>
+    </div>
+  </div>
+
+  <br>
+
+  <div id="slides" class="slideshow-container">
+    <!--- <div class="container"> --->
+
+      <div class="mySlides fade"> 
+        <img src="images/img_nature_wide.jpg" style="width:100%">
+        <div class="text" id="caption1">Caption Text</div>
+      </div>
+
+      <div class="mySlides fade">
+        <img src="images/img_snow_wide.jpg" style="width:100%">
+        <div class="text" id="caption2">Caption Two</div>
+      </div>
+
+      <div class="mySlides fade">
+        <img src="images/img_mountains_wide.jpg" style="width:100%">
+      <div class="text" id="caption3">Caption Three</div>
+      </div>
+
+    <div id="controlls">
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+    </div>
+
+  <!---- </div> --->
+</div> 
+
+
+  <br>
+
+  <div id="dots" style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+    <span class="dot" onclick="currentSlide(3)"></span> 
+  </div>
+
+  <div id="where" class="container centered">
+    <h2>Where Are We?</h2>
+    <div class="map-buttons">
+      <button onclick="toggleFullscreen()">Toggle Fullscreen</button>
+      <button onclick="openInstructions()">Instructions</button>
+    </div>
+    <div id="map"></div>
+  </div>
+
+  <div class="container centered">
+    <h2>Social</h2>
+    <a href="https://www.facebook.com/SentaurusSpot/">Facebook</a>
+    <a href="phone:6906211369">Phone</a>
+    <a href="mailto:fertexenon@yahoo.com">Email</a>
+    <a href="https://www.airbnb.gr/rooms/34131652?_set_bev_on_new_domain=1719683230_EAZmI1NGE2NzIyOD&source_impression_id=p3_1719683230_P3Rtc-KIeYfurJuz">AirBnb</a>
+    <a href="https://www.booking.com/hotel/gr/centaurs-spot.en-gb.html?label=New_English_EN_GR_26745747865-cgHJznX2Y6eGVkzaC*B6owS637942138514%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atidsa-195219801865%3Alp9197810%3Ali%3Adec%3Adm%3Aag26745747865%3Acmp394169905&sid=2c662f712273741a63c25fbd79b620dd&gclid=CjwKCAjw4f6zBhBVEiwATEHFVvD2IwJJuGnAe2vtguyzPhRdq4yXYkjl-WCr0p9z6aIqJMTOzpmnaBoCoH4QAvD_BwE&aid=318615&ucfs=1&arphpl=1&dest_id=-822849&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=1&hapos=1&sr_order=popularity&srpvid=e6a47d2a875b00a1&srepoch=1719683294&from=searchresults#hotelTmpl">Booking</a>
+    <a href="https://g.co/kgs/1yyNEAS">Google</a>
+  </div>
+  <div id="directions" style="display: none;" class="centered container">
+    <h2>hi</h2>
+  </div>
+  <br>
+
+  <script src="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.14.0/maps/maps-web.min.js"></script>
+
+  <script>
+    // Initialize and setup the map
+    var map = tt.map({
+        key: '7RJ4UybC5uwUCGh4reI70KdhHU5Q00Mm',
+        container: 'map',
+        center: [22.9879784, 39.4012922], // Coordinates of Ferteklides Lodge
+        zoom: 17 // Adjust the zoom level as needed
+    });
+
+      
+    // Toggle fullscreen function
+    function toggleFullscreen() {
+        var mapElement = document.getElementById('map');
+        mapElement.classList.toggle('fullscreen');
+        map.resize();
+    }
+
+    // Open instructions function (opens Google Maps link)
+    function openInstructions() {
+    window.open('https://www.google.com/maps/place/Ferteklides+lodge/@39.4012368,22.9870104,19.17z/data=!4m20!1m13!4m12!1m4!2m2!1d22.9509289!2d39.3635451!4e1!1m6!1m2!1s0x14a76d1120036f3d:0x24701c34c2dbc7cc!2sferteklidid+lodge!2m2!1d22.9879784!2d39.4012922!3m5!1s0x14a76d1120036f3d:0x24701c34c2dbc7cc!8m2!3d39.4012922!4d22.9879784!16s%2Fg%2F11ny46ks4k?entry=ttu', '_blank');
+      }
+  </script>
+  
+    
+  <footer>
+    <p>© 2024 </p> <a href="https://golden.is-a.dev">Odysseas Chryssos</a><p>. All rights reserved.</p>
+    <h5>Need Our Services? <a href="https://goldencube.dev">goldencube development</a></h5>
+  </footer>
+
+  <script src="/script.js"></script>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.has('dir')) {
+      // 'dir' query parameter exists in the URL
+      toggleDirections()
+    } else {
+      // 'dir' query parameter does not exist in the URL
+      
+}
+  </script>
+</body>
+</html> 

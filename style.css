@@ -1,0 +1,264 @@
+:root {
+  --color-primary-100:  #382bf0;
+  --color-primary-200:  #5e43f3;
+  --color-primary-300:  #7a5af5; 
+  --color-primary-400:  #9171f8;
+  --color-primary-500:  #a688fa;
+  --color-primary-600:  #ba9ffb;
+  --color-surface-100:  #121212;
+  --color-surface-200:  #282828;
+  --color-surface-300:  #3f3f3f;
+  --color-surface-400:  #575757;
+  --color-surface-500:  #717171;
+  --color-surface-600:  #cec8c8;  
+  --color-surface-mixed-100:  #1a1625;
+  --color-surface-mixed-200:  #2f2b3a;
+  --color-surface-mixed-300:  #46424f;
+  --color-surface-mixed-400:  #5e5a66;
+  --color-surface-mixed-500:  #76737e;
+  --color-surface-mixed-600:  #908d96;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100%;
+  font-family: Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: whitesmoke;
+  color: black;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+  background-color: var(--color-surface-100);
+  color: var(--color-surface-600);
+  border: var(--color-surface-600)
+}
+
+.centered {
+  text-align: center;
+}
+
+.mySlides {
+  display: none;
+}
+
+img {
+  vertical-align: middle;
+  border-radius: 10px;
+}
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  border-radius: 10px;
+  border: 5px double #252525;
+  padding: 10px;
+}
+
+body.dark-mode .slideshow-container {
+  border: 5px double var(--color-surface-600);
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+nav {
+  background: #1e1e1e;
+  padding: 15px;
+  text-align: center;
+}
+
+nav a {
+  margin: 0 15px;
+  color: #00ff99;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+footer {
+  background: #1e1e1e;
+  text-align: center;
+  padding: 15px;
+  font-family: 'Roboto', sans-serif;
+  color: #ffffff;
+  bottom: 1px;
+  margin-top: auto;
+}
+
+footer a {
+  font-family: 'Roboto', sans-serif;
+  color: #ffffff;
+  display: inline;
+}
+
+footer p {
+  display: inline;
+  margin: 0;
+}
+
+.container {
+  width: 80%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  border-radius: 10px;
+  border: 5px double #252525;
+  margin-top: 20px;
+}
+
+body.dark-mode .container {
+  border: 5px double var(--color-surface-600);
+}
+
+#map {
+  height: 400px;
+  margin-top: 20px;
+  border-radius: 10px;
+  border: 5px double #252525;
+}
+
+body.dark-mode #map {
+  border: 5px double var(--color-surface-600);
+}
+
+.centerInside {
+  display: flex;
+  justify-content: center;
+}
+
+#language-select {
+  font-family: Verdana, sans-serif;
+  font-size: 16px;
+  padding: 8px;
+  border-radius: 5px;
+  border: 3px solid #292828;
+  appearance: none;
+  background-color: #1e1e1e;
+  cursor: pointer;
+  width: auto;
+  margin-top: 20px;
+  justify-content: flex-end;
+  margin-left: 790px;
+}
+
+#language-select option {
+  font-size: 16px;
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#language-select option:hover {
+  background-color: #1e1e1e;
+}
+
+#language-select option:checked {
+  background-color: #1e1e1ed0;
+}
+
+#language-select, #language-select option {
+  color: #252525;
+}
+
+body.dark-mode #language-select, body.dark-mode #language-select option {
+  color: var(--color-surface-600);
+}
+
+.dark {
+  font-family: Verdana, sans-serif;
+  font-size: 16px;
+  padding: 8px;
+  border-radius: 5px;
+  border: 3px solid #292828;
+  appearance: none;
+  background-color: #1e1e1e;
+  cursor: pointer;
+  width: auto;
+}
+
+.form {
+  margin-top: 20%;
+  margin-bottom: 15%;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {
+      font-size: 11px;
+  }
+}
