@@ -13,7 +13,7 @@
     <a href="#about" id="aboutNav">About Us</a>
     <a href="index.html?dir" onclick="toggleDirections()" id="directionsNav">Directions</a>
     <a href="#social">Social Media</a>
-    <a href="/contact" id="contactNav">Contact</a>
+    <a href="#contact" id="contactNav">Contact</a>
     <select id="language-select" onchange="switchLanguage()">
       <option value="en">🇬🇧</option>
       <option value="el">🇬🇷</option>
@@ -80,14 +80,14 @@
     <div id="map"></div>
   </div>
 
-  <div class="container centered">
+  <div class="container centered" id="social">
     <h2>Social</h2>
-    <a href="https://www.facebook.com/SentaurusSpot/">Facebook</a>
-    <a href="phone:6906211369">Phone</a>
-    <a href="mailto:fertexenon@yahoo.com">Email</a>
-    <a href="https://www.airbnb.gr/rooms/34131652?_set_bev_on_new_domain=1719683230_EAZmI1NGE2NzIyOD&source_impression_id=p3_1719683230_P3Rtc-KIeYfurJuz">AirBnb</a>
-    <a href="https://www.booking.com/hotel/gr/centaurs-spot.en-gb.html?label=New_English_EN_GR_26745747865-cgHJznX2Y6eGVkzaC*B6owS637942138514%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atidsa-195219801865%3Alp9197810%3Ali%3Adec%3Adm%3Aag26745747865%3Acmp394169905&sid=2c662f712273741a63c25fbd79b620dd&gclid=CjwKCAjw4f6zBhBVEiwATEHFVvD2IwJJuGnAe2vtguyzPhRdq4yXYkjl-WCr0p9z6aIqJMTOzpmnaBoCoH4QAvD_BwE&aid=318615&ucfs=1&arphpl=1&dest_id=-822849&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=1&hapos=1&sr_order=popularity&srpvid=e6a47d2a875b00a1&srepoch=1719683294&from=searchresults#hotelTmpl">Booking</a>
-    <a href="https://g.co/kgs/1yyNEAS">Google</a>
+    <a href="https://www.facebook.com/SentaurusSpot/" target="_blank" class="social-link">Facebook</a>
+    <a href="phone:6906211369" class="social-link">Phone</a>
+    <a href="mailto:fertexenon@yahoo.com" class="social-link">Email</a>
+    <a href="https://www.airbnb.gr/rooms/34131652?_set_bev_on_new_domain=1719683230_EAZmI1NGE2NzIyOD&source_impression_id=p3_1719683230_P3Rtc-KIeYfurJuz" target="_blank" class="social-link">Airbnb</a>
+    <a href="https://www.booking.com/hotel/gr/centaurs-spot.en-gb.html?label=New_English_EN_GR_26745747865-cgHJznX2Y6eGVkzaC*B6owS637942138514%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atidsa-195219801865%3Alp9197810%3Ali%3Adec%3Adm%3Aag26745747865%3Acmp394169905&sid=2c662f712273741a63c25fbd79b620dd&gclid=CjwKCAjw4f6zBhBVEiwATEHFVvD2IwJJuGnAe2vtguyzPhRdq4yXYkjl-WCr0p9z6aIqJMTOzpmnaBoCoH4QAvD_BwE&aid=318615&ucfs=1&arphpl=1&dest_id=-822849&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=1&hapos=1&sr_order=popularity&srpvid=e6a47d2a875b00a1&srepoch=1719683294&from=searchresults#hotelTmpl" target="_blank" class="social-link">Booking</a>
+    <a href="https://g.co/kgs/1yyNEAS" target="_blank" class="social-link">Google</a>
   </div>
   <div id="directions" style="display: none;" class="centered container">
     <h2>hi</h2>
@@ -125,7 +125,7 @@
     <h5>Need Our Services? <a href="https://goldencube.dev">goldencube development</a></h5>
   </footer>
 
-  <script src="/script.js"></script>
+  <script defer src="/script.js"></script>
 
   <script>
     const urlParams = new URLSearchParams(window.location.search);
