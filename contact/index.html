@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Centaurus Spot, amazing place, Makrinitsa, directions, contact, social media, contact, hotel, motel, graphic vibes, mountain views">
+    <title>Centaurus Spot - Contact</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/#about" id="aboutNav">About Us</a>
+        <a href="/index.html?dir" onclick="toggleDirections()" id="directionsNav">Directions</a>
+        <a href="/#social">Social Media</a>
+        <select id="language-select" onchange="switchLanguage()">
+          <option value="en">🇬🇧</option>
+          <option value="el">🇬🇷</option>
+        </select>
+        <button class="dark" id="DarkModeBtn" onclick="toggleDarkMode()">🌙☀️</button>
+      </nav>
+<div class="container centered form">
+    <form action="https://formspree.io/f/mrbzgzvq" method="POST">
+        <label>
+            Your email:
+            <input type="email" name="email">
+        </label>
+        <br>
+        <br>
+        <label>
+        Your message:
+        <textarea name="message"></textarea>
+        </label>
+        <!-- your other form fields go here -->
+         <br>
+         <br>
+        <button type="submit">Send</button>
+    </form>
+</div>
+<footer>
+    <p>© 2024 </p> <a href="https://golden.is-a.dev">Odysseas Chryssos</a><p>. All rights reserved.</p>
+    <h5>Need Our Services? <a href="https://goldencube.dev">goldencube development</a></h5>
+  </footer>
+<script src="/script.js"></script>
+</body>
+</html>
