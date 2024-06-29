@@ -137,10 +137,13 @@ nav {
   background: #1e1e1e;
   padding: 15px;
   text-align: center;
+  display: flex;
+  justify-content: flex-end; /* Align items to the right */
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
 }
 
-nav a {
-  margin: 0 15px;
+nav a, #language-select, .dark {
+  margin: 0 10px;
   color: #00ff99;
   text-decoration: none;
   font-weight: 700;
@@ -207,9 +210,7 @@ body.dark-mode #map {
   appearance: none;
   background-color: #1e1e1e;
   cursor: pointer;
-  width: auto;
   margin-top: 20px;
-  justify-content: flex-end;
   margin-left: 790px;
 }
 
