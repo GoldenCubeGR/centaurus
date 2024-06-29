@@ -11,7 +11,7 @@
 
   <nav>
     <a href="#about" id="aboutNav">About Us</a>
-    <a href="index.html?dir" onclick="toggleDirections()" id="directionsNav">Directions</a>
+    <a href="#" onclick="toggleDirections()" id="directionsNav">Directions</a>
     <a href="#social">Social Media</a>
     <a href="contact" id="contactNav">Contact</a>
     <select id="language-select" onchange="switchLanguage()">
@@ -130,12 +130,12 @@
   <script>
     const urlParams = new URLSearchParams(window.location.search);
     if (urlParams.has('dir')) {
-      // 'dir' query parameter exists in the URL
+      //'dir' query parameter exists in the URL
       toggleDirections()
     } else {
       // 'dir' query parameter does not exist in the URL
       
-}
+    }
   </script>
 </body>
 </html> 
