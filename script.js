@@ -19,7 +19,6 @@ function changeBtn(){
   else{ darkModeBtn.innerText = '🌙' }
 }
 function toggleDarkMode(){
-  console.log('works?')
   if(darkMode==false){
     darkMode = true
     changeBtn()
@@ -109,6 +108,7 @@ function toggleDirections() {
   var dots = document.getElementById('dots');
   var about = document.getElementById('aboutDiv')
   var where = document.getElementById('where')
+  var social = document.getElementById('social')
 
   if (slides.style.display === 'none') {
       slides.style.display = 'block'; // Show About page
@@ -117,6 +117,7 @@ function toggleDirections() {
       dots.style.display = 'block'; // Show Under Construction message
       about.style.display = 'block'
       where.style.display = 'block'
+      social.style.display = 'block'
       document.getElementById("directionsNav").href = "/index.html?";
   } else {
       slides.style.display = 'none'; // Hide About page
@@ -125,6 +126,7 @@ function toggleDirections() {
       dots.style.display = 'none'; // Hide Under Construction message
       about.style.display = 'none'
       where.style.display = 'none'
+      social.style.display = 'none'
       document.getElementById("directionsNav").href = "/index.html?dir";
     }
 }
