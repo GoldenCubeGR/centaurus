@@ -125,7 +125,7 @@
     <h5>Need Our Services? <a href="https://goldencube.dev">goldencube development</a></h5>
   </footer>
 
-  <script defer src="/script.js"></script>
+  <script src="/script.js"></script>
 
   <script>
     const urlParams = new URLSearchParams(window.location.search);
@@ -135,6 +135,9 @@
     } else {
       // 'dir' query parameter does not exist in the URL
       
+    }
+    if (urlParams.has('fbclid')){
+      alert('Welcome Facebook User');
     }
   </script>
 </body>
