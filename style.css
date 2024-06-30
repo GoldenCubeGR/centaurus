@@ -140,6 +140,7 @@ nav {
   display: flex;
   justify-content: flex-end; /* Align items to the right */
   flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+  
 }
 
 nav a, #language-select, .dark {
@@ -147,6 +148,7 @@ nav a, #language-select, .dark {
   color: #00ff99;
   text-decoration: none;
   font-weight: 700;
+  margin-top: 20px;
 }
 
 footer {
@@ -247,6 +249,7 @@ body.dark-mode #language-select, body.dark-mode #language-select option {
   background-color: #1e1e1e;
   cursor: pointer;
   width: auto;
+  margin-top: 20px;
 }
 
 .form {
